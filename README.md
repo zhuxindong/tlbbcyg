@@ -58,4 +58,7 @@ profession=8是职业信息，8是逍遥
 
 比如说查询血量大于60W，火攻大于9000，会心大于1000的角色数据：（按血量排序）
 
-select * from tlbb.tlbbuser where huogong > '9000' and life > '600000' and huixin > '1000' order by life desc;
+```sql
+select * from tlbb.tlbbuser where cast(huogong as SIGNED) > 10000 and cast(life as SIGNED) > 700000 and cast(huixin as SIGNED) > 1200 order by cast(life as SIGNED) desc;
+```
+
