@@ -3,6 +3,7 @@ package com.zxd.tlbbcyg.controller;
 import com.alibaba.fastjson.JSON;
 import com.zxd.tlbbcyg.mapper.TlbbUserMapper;
 import com.zxd.tlbbcyg.pojo.TlbbUser;
+import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -363,7 +364,7 @@ public class UserController {
         user.setPrice(goodsInfos.getElementsByClass("ui-money-color").get(0).html().replace("￥",""));
         user.setLife(baseInfos.getElementsByTag("i").get(0).html());
         user.setSex(baseInfos.getElementsByClass("row2").get(0).getElementsByTag("span").html());
-        user.setMingZhong(baseInfos.getElementsByClass("row2").get(14).getElementsByTag("span").html());
+        user.setMingZhong(StringUtils.substring(baseInfos.getElementsByClass("row2").get(14).getElementsByTag("span").html(),0,6));
         user.setHuiXin(baseInfos.getElementsByClass("row2").get(16).getElementsByTag("span").html());
         user.setXiuLianScore(otherInfos.getElementsByClass("row2").get(3).getElementsByTag("span").html());
         user.setBaoShiScore(otherInfos.getElementsByClass("row2").get(5).getElementsByTag("span").html());
