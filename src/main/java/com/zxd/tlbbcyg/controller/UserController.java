@@ -362,7 +362,7 @@ public class UserController {
         user.setSellUrl(url);
         user.setPrice(goodsInfos.getElementsByClass("ui-money-color").get(0).html().replace("￥",""));
         user.setLife(baseInfos.getElementsByTag("i").get(0).html());
-        user.setSex(baseInfos.getElementsByClass("row2").get(1).getElementsByTag("span").html());
+        user.setSex(baseInfos.getElementsByClass("row2").get(0).getElementsByTag("span").html());
         user.setMingZhong(baseInfos.getElementsByClass("row2").get(14).getElementsByTag("span").html());
         user.setHuiXin(baseInfos.getElementsByClass("row2").get(16).getElementsByTag("span").html());
         user.setXiuLianScore(otherInfos.getElementsByClass("row2").get(3).getElementsByTag("span").html());

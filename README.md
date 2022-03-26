@@ -39,33 +39,31 @@ SET FOREIGN_KEY_CHECKS = 1;
 
 启动工程，本地访问
 
-http://localhost:8080/u?price=1500&totalPage=5
+http://localhost:8080/tm?price=1500&totalPage=5
 
-price是价格，totalPage是指定爬取前几页的数据，比如totalPage=5，就代表爬取价格1到1500，前5页的数据，
+tm代表唐门（xy代表逍遥，用拼音首字母），price是价格，totalPage是指定爬取前几页的数据，比如totalPage=5，就代表爬取价格1到1500，前5页的数据，
 
 
 
-```
-UserController里面
-        String url = "http://tl.cyg.changyou.com/goods/selling?world_id=0&profession=8&price=1-" + price + "&have_chosen=price*1-400%20profession*8&page_num=";
+~~UserController里面~~
+        ~~String url = "http://tl.cyg.changyou.com/goods/selling?world_id=0&profession=8&price=1-" + price + "&have_chosen=price*1-400%20profession*8&page_num=";~~
 
-profession=8是职业信息，8是逍遥
-剩余职业可以去畅易阁看，数字排序的，类推即可
-职业信息枚举
-0-少林
-1-明教
-2-丐帮
-3-武当
-4-峨眉
-5-星宿
-6-天龙
-7-天山
-8-逍遥
-10-慕容
-11-唐门
-12-鬼谷
-13-桃花岛
-```
+~~profession=8是职业信息，8是逍遥~~
+~~剩余职业可以去畅易阁看，数字排序的，类推即可~~
+~~职业信息枚举~~
+~~0-少林~~
+~~1-明教~~
+~~2-丐帮~~
+~~3-武当~~
+~~4-峨眉~~
+~~5-星宿~~
+~~6-天龙~~
+~~7-天山~~
+~~8-逍遥~~
+~~10-慕容~~
+~~11-唐门~~
+~~12-鬼谷~~
+~~13-桃花岛~~
 
 
 
