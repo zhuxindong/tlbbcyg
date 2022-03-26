@@ -364,8 +364,8 @@ public class UserController {
         user.setPrice(goodsInfos.getElementsByClass("ui-money-color").get(0).html().replace("￥",""));
         user.setLife(baseInfos.getElementsByTag("i").get(0).html());
         user.setSex(baseInfos.getElementsByClass("row2").get(0).getElementsByTag("span").html());
-        user.setMingZhong(StringUtils.substring(baseInfos.getElementsByClass("row2").get(14).getElementsByTag("span").html(),0,6));
-        user.setHuiXin(baseInfos.getElementsByClass("row2").get(16).getElementsByTag("span").html());
+        user.setMingZhong(StringUtils.substring(baseInfos.getElementsByClass("row2").get(13).getElementsByTag("span").html(),0,6));
+        user.setHuiXin(baseInfos.getElementsByClass("row2").get(15).getElementsByTag("span").html());
         user.setXiuLianScore(otherInfos.getElementsByClass("row2").get(3).getElementsByTag("span").html());
         user.setBaoShiScore(otherInfos.getElementsByClass("row2").get(5).getElementsByTag("span").html());
         user.setBinGong(userInfos.getElementsByAttributeValue("data-tip","bing").get(0).getElementsByClass("c-o-l").get(0).getElementsByTag("p").get(0).html().replace("冰攻击 +",""));
