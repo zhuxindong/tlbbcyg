@@ -44,6 +44,12 @@ public class TlbbUser {
     @TableField(value = "baoShiScore")
     private String baoShiScore;
 
+    @TableField(value = "mengPai")
+    private String mengPai;
+
+    @TableField(value = "hongLi")
+    private String hongLi;
+
     public long getId() {
         return id;
     }
@@ -154,5 +160,21 @@ public class TlbbUser {
 
     public void setBaoShiScore(String baoShiScore) {
         this.baoShiScore = baoShiScore;
+    }
+
+    public String getMengPai() {
+        return mengPai;
+    }
+
+    public void setMengPai(String mengPai) {
+        this.mengPai = mengPai;
+    }
+
+    public String getHongLi() {
+        return hongLi;
+    }
+
+    public void setHongLi(String hongLi) {
+        this.hongLi = hongLi;
     }
 }

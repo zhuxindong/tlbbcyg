@@ -22,9 +22,11 @@ CREATE TABLE `tlbbuser`  (
   `huixin` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '会心',
   `mingzhong` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '命中',
   `xiulianscore` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '修炼评分',
+  `mengpai` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '门派',
   `baoshiscore` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '宝石评分',
+  `hongli` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '红利',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 189 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 188 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 SET FOREIGN_KEY_CHECKS = 1;
 
@@ -49,7 +51,20 @@ UserController里面
 
 profession=8是职业信息，8是逍遥
 剩余职业可以去畅易阁看，数字排序的，类推即可
-
+职业信息枚举
+0-少林
+1-明教
+2-丐帮
+3-武当
+4-峨眉
+5-星宿
+6-天龙
+7-天山
+8-逍遥
+10-慕容
+11-唐门
+12-鬼谷
+13-桃花岛
 ```
 
 
@@ -61,4 +76,22 @@ profession=8是职业信息，8是逍遥
 ```sql
 select * from tlbb.tlbbuser where cast(huogong as SIGNED) > 10000 and cast(life as SIGNED) > 700000 and cast(huixin as SIGNED) > 1200 order by cast(life as SIGNED) desc;
 ```
+
+
+
+再比如说，查询冰攻大于3000，血量大于30W，会心大于100的角色数据：（按血量排序）
+
+```sql
+select * from tlbb.tlbbuser where mengpai = '桃花' and cast(bingong as SIGNED) > 3000 and cast(life as SIGNED) > 300000 and cast(huixin as SIGNED) > 100 order by cast(life as SIGNED) desc;
+```
+
+
+
+再比如说，查询结果按红利数量排序
+
+```sql
+select * from tlbb.tlbbuser where mengpai = '桃花'  order by cast(hongli as SIGNED) desc limit 20;
+```
+
+
 
