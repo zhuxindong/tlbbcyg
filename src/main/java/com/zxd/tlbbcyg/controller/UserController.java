@@ -39,7 +39,20 @@ public class UserController {
         for (int i = 1; i <= Integer.valueOf(totalPage); i++) {
             try {
                 String realUrl = url + String.valueOf(i);
-                Document document = Jsoup.parse(new URL(realUrl), 10000);
+
+                Document document = Jsoup.connect(realUrl)
+                        .header("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9")
+                        .header("Accept-Encoding","gzip, deflate")
+                        .header("Accept-Language","zh-CN,zh;q=0.9")
+                        .header("Cache-Control","no-cache")
+                        .header("Host","tl.cyg.changyou.com")
+                        .header("Pragma","cache")
+                        .header("User-Agent","Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36")
+                        .header("Proxy-Connection","keep-alive")
+                        .header("Referer",realUrl)
+                        .header("Upgrade-Insecure-Requests","1")
+                        .timeout(10000).get();
+
                 Element J_good_list = document.getElementById("J_good_list");
                 Elements lis = J_good_list.getElementsByTag("li");
 
@@ -79,7 +92,18 @@ public class UserController {
         for (int i = 1; i <= Integer.valueOf(totalPage); i++) {
             try {
                 String realUrl = url + String.valueOf(i);
-                Document document = Jsoup.parse(new URL(realUrl), 10000);
+                Document document = Jsoup.connect(realUrl)
+                        .header("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9")
+                        .header("Accept-Encoding","gzip, deflate")
+                        .header("Accept-Language","zh-CN,zh;q=0.9")
+                        .header("Cache-Control","no-cache")
+                        .header("Host","tl.cyg.changyou.com")
+                        .header("Pragma","cache")
+                        .header("User-Agent","Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36")
+                        .header("Proxy-Connection","keep-alive")
+                        .header("Referer",realUrl)
+                        .header("Upgrade-Insecure-Requests","1")
+                        .timeout(10000).get();
                 Element J_good_list = document.getElementById("J_good_list");
                 Elements lis = J_good_list.getElementsByTag("li");
 
@@ -120,7 +144,18 @@ public class UserController {
         for (int i = 1; i <= Integer.valueOf(totalPage); i++) {
             try {
                 String realUrl = url + String.valueOf(i);
-                Document document = Jsoup.parse(new URL(realUrl), 10000);
+                Document document = Jsoup.connect(realUrl)
+                        .header("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9")
+                        .header("Accept-Encoding","gzip, deflate")
+                        .header("Accept-Language","zh-CN,zh;q=0.9")
+                        .header("Cache-Control","no-cache")
+                        .header("Host","tl.cyg.changyou.com")
+                        .header("Pragma","cache")
+                        .header("User-Agent","Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36")
+                        .header("Proxy-Connection","keep-alive")
+                        .header("Referer",realUrl)
+                        .header("Upgrade-Insecure-Requests","1")
+                        .timeout(10000).get();
                 Element J_good_list = document.getElementById("J_good_list");
                 Elements lis = J_good_list.getElementsByTag("li");
 
@@ -158,7 +193,18 @@ public class UserController {
         for (int i = 1; i <= Integer.valueOf(totalPage); i++) {
             try {
                 String realUrl = url + String.valueOf(i);
-                Document document = Jsoup.parse(new URL(realUrl), 10000);
+                Document document = Jsoup.connect(realUrl)
+                        .header("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9")
+                        .header("Accept-Encoding","gzip, deflate")
+                        .header("Accept-Language","zh-CN,zh;q=0.9")
+                        .header("Cache-Control","no-cache")
+                        .header("Host","tl.cyg.changyou.com")
+                        .header("Pragma","cache")
+                        .header("User-Agent","Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36")
+                        .header("Proxy-Connection","keep-alive")
+                        .header("Referer",realUrl)
+                        .header("Upgrade-Insecure-Requests","1")
+                        .timeout(10000).get();
                 Element J_good_list = document.getElementById("J_good_list");
                 Elements lis = J_good_list.getElementsByTag("li");
 
@@ -199,7 +245,18 @@ public class UserController {
         for (int i = 1; i <= Integer.valueOf(totalPage); i++) {
             try {
                 String realUrl = url + String.valueOf(i);
-                Document document = Jsoup.parse(new URL(realUrl), 10000);
+                Document document = Jsoup.connect(realUrl)
+                        .header("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9")
+                        .header("Accept-Encoding","gzip, deflate")
+                        .header("Accept-Language","zh-CN,zh;q=0.9")
+                        .header("Cache-Control","no-cache")
+                        .header("Host","tl.cyg.changyou.com")
+                        .header("Pragma","cache")
+                        .header("User-Agent","Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36")
+                        .header("Proxy-Connection","keep-alive")
+                        .header("Referer",realUrl)
+                        .header("Upgrade-Insecure-Requests","1")
+                        .timeout(10000).get();
                 Element J_good_list = document.getElementById("J_good_list");
                 Elements lis = J_good_list.getElementsByTag("li");
 
@@ -239,7 +296,18 @@ public class UserController {
         for (int i = 1; i <= Integer.valueOf(totalPage); i++) {
             try {
                 String realUrl = url + String.valueOf(i);
-                Document document = Jsoup.parse(new URL(realUrl), 10000);
+                Document document = Jsoup.connect(realUrl)
+                        .header("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9")
+                        .header("Accept-Encoding","gzip, deflate")
+                        .header("Accept-Language","zh-CN,zh;q=0.9")
+                        .header("Cache-Control","no-cache")
+                        .header("Host","tl.cyg.changyou.com")
+                        .header("Pragma","cache")
+                        .header("User-Agent","Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36")
+                        .header("Proxy-Connection","keep-alive")
+                        .header("Referer",realUrl)
+                        .header("Upgrade-Insecure-Requests","1")
+                        .timeout(10000).get();
                 Element J_good_list = document.getElementById("J_good_list");
                 Elements lis = J_good_list.getElementsByTag("li");
 
@@ -250,7 +318,7 @@ public class UserController {
                         System.out.println(detailUrl);
                         TlbbUser tlbbUser = qryDetail(detailUrl,"天龙");
                         tlbbUserMapper.insert(tlbbUser);
-                        Thread.sleep(500);
+                        Thread.sleep(1500);
                     }catch (Exception e1){
                         e1.printStackTrace();
                         continue;
@@ -279,7 +347,18 @@ public class UserController {
         for (int i = 1; i <= Integer.valueOf(totalPage); i++) {
             try {
                 String realUrl = url + String.valueOf(i);
-                Document document = Jsoup.parse(new URL(realUrl), 10000);
+                Document document = Jsoup.connect(realUrl)
+                        .header("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9")
+                        .header("Accept-Encoding","gzip, deflate")
+                        .header("Accept-Language","zh-CN,zh;q=0.9")
+                        .header("Cache-Control","no-cache")
+                        .header("Host","tl.cyg.changyou.com")
+                        .header("Pragma","cache")
+                        .header("User-Agent","Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36")
+                        .header("Proxy-Connection","keep-alive")
+                        .header("Referer",realUrl)
+                        .header("Upgrade-Insecure-Requests","1")
+                        .timeout(10000).get();
                 Element J_good_list = document.getElementById("J_good_list");
                 Elements lis = J_good_list.getElementsByTag("li");
 
@@ -317,7 +396,19 @@ public class UserController {
 
 
     public  TlbbUser qryDetail(String url,String mengpai) throws IOException {
-        Document document = Jsoup.parse(new URL(url), 10000);
+//        Document document = Jsoup.parse(new URL(url), 10000);
+        Document document = Jsoup.connect(url)
+                .header("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9")
+                .header("Accept-Encoding","gzip, deflate")
+                .header("Accept-Language","zh-CN,zh;q=0.9")
+                .header("Cache-Control","no-cache")
+                .header("Host","tl.cyg.changyou.com")
+                .header("Pragma","cache")
+                .header("User-Agent","Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36")
+                .header("Proxy-Connection","keep-alive")
+                .header("Referer",url)
+                .header("Upgrade-Insecure-Requests","1")
+                .timeout(10000).get();
 
         // 基本信息 灵气体力啥的
         Element baseInfos = document.getElementsByClass("right w222 fn-clearfix").get(0).getElementsByClass("box2 h422").get(0);
